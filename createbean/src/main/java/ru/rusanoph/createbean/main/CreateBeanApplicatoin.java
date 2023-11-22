@@ -1,6 +1,5 @@
 package ru.rusanoph.createbean.main;
 
-import java.util.concurrent.Callable;
 import java.util.function.Supplier;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

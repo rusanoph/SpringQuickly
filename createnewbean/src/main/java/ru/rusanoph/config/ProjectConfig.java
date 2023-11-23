@@ -1,35 +1,27 @@
 package ru.rusanoph.config;
 
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import ru.rusanoph.main.Parrot;
-import ru.rusanoph.main.Person;
+
 
 @Configuration
+@ComponentScan(basePackages = "ru.rusanoph.main")
 public class ProjectConfig {
-    
+
     @Bean
-    public Parrot parrot() {
+    public Parrot parrot1() {
         Parrot p = new Parrot();
-        p.setName("Kryuger");
-        return p;
+        p.setName("Kayne");
+        return p ;
     }
-
-    // @Bean
-    // public Person person() {
-    //     Person p = new Person();
-    //     p.setName("Andrew");
-    //     p.setParrot(parrot());
-    //     return p;
-    // }
 
     @Bean
-    public Person person(Parrot parrot) {
-        Person p = new Person();
-        p.setName("Andrew");
-        p.setParrot(parrot);
-        return p;
+    public Parrot parrot2() {
+        Parrot p = new Parrot();
+        p.setName("Sandy");
+        return p ;
     }
-
 }

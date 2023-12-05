@@ -1,10 +1,10 @@
 package ru.rusanoph.repository;
 
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import ru.rusanoph.model.Comment;
 
-@Component
+@Repository
 public class DBCommentRepository implements CommentRepository {
 
     @Override

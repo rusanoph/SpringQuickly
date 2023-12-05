@@ -6,12 +6,11 @@ import org.springframework.stereotype.Component;
 import ru.rusanoph.model.Comment;
 
 @Component
-@Qualifier("EMAIL")
-public class EmailCommentNotificationProxy implements CommentNotificatoinProxy {
+@Qualifier("PUSH")
+public class CommentPushNotificationProxy implements CommentNotificatoinProxy {
 
     @Override
     public void sendComment(Comment comment) {
-        System.out.println("Sending email notification for comment: " + comment.getText());        
+        System.out.println("Sending push notificatoin for comment: " + comment.getText());
     }
-    
 }

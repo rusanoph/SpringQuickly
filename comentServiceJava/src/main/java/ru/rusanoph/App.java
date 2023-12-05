@@ -4,8 +4,6 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import ru.rusanoph.config.ProjectConfiguration;
 import ru.rusanoph.model.Comment;
-import ru.rusanoph.proxy.EmailCommentNotificationProxy;
-import ru.rusanoph.repository.DBCommentRepository;
 import ru.rusanoph.service.CommentService;
 
 
@@ -15,7 +13,7 @@ public class App
 
     public static void main( String[] args )
     {
-        // Spring Context Style
+        // === Spring Context Style ===
         var context = new AnnotationConfigApplicationContext(ProjectConfiguration.class);
 
         var comment = new Comment();
@@ -27,7 +25,8 @@ public class App
 
         context.close();
 
-        // Pure Java CommentService Usage
+        // === Pure Java CommentService Usage ===
+
         // var commentRepository = new DBCommentRepository();
         // var commentNotificatoinProxy = new EmailCommentNotificationProxy();
 

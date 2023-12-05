@@ -1,9 +1,12 @@
 package ru.rusanoph.service;
 
+import org.springframework.stereotype.Component;
+
 import ru.rusanoph.model.Comment;
 import ru.rusanoph.proxy.CommentNotificatoinProxy;
 import ru.rusanoph.repository.CommentRepository;
 
+@Component
 public class CommentService {
     
     private final CommentRepository commentRepository;

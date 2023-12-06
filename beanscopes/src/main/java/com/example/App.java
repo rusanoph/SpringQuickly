@@ -17,10 +17,10 @@ public class App
     {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        var cs1 = context.getBean(CommentService.class);        
-        var cs2 = context.getBean(CommentService.class);
+        var cs = context.getBean(CommentService.class);        
+        var us = context.getBean(UserService.class);
 
-        var b = cs1 == cs2;
+        var b = cs.getCommentRepository() == us.getCommentRepository();
 
         System.out.println("b = " + b);
 

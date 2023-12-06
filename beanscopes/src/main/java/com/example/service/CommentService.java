@@ -5,8 +5,6 @@ import org.springframework.stereotype.Service;
 
 import com.example.repository.CommentRepository;
 
-@Service
-@Lazy
 public class CommentService {
     private final CommentRepository commentRepository;
 

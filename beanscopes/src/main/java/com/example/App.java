@@ -17,12 +17,12 @@ public class App
     {
         var context = new AnnotationConfigApplicationContext(ProjectConfig.class);
 
-        System.out.println("Before lazy instance");
+        var cs1 = context.getBean(CommentService.class);        
+        var cs2 = context.getBean(CommentService.class);
 
-        var commentService = context.getBean(CommentService.class);
+        var b = cs1 == cs2;
 
-        System.out.println("After lazy instance");
-
+        System.out.println("b = " + b);
 
     }
 }
